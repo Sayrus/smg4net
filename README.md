@@ -11,8 +11,14 @@ It is a .NET API wrapper for iTechArt SMG Portal.
 
 * Authentincate user:
   ```c#
-  AuthenticateResult authResult = await api.Authenticate(new AuthenticateParameters { Password = password, UserName = userName });
-  
+  AuthenticateParameters authenticateParameters = new AuthenticateParameters
+            {
+                Password = password,
+                UserName = userName
+            };
+
+  AuthenticateResult authResult = await api.Authenticate(authenticateParameters);
+            
   if (authResult.ErrorCode.Equals(ErrorCode.None) && !String.IsNullOrEmpty(authResult.SesionId))
   {
       //TODO: authenticate user in the app                
