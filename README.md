@@ -1,4 +1,4 @@
-# What is that?
+# What is it?
 
 It is a .NET API wrapper for iTechArt SMG Portal.
 
